@@ -15,7 +15,7 @@ export default function Hero() {
       {/* Video Background */}
       <div className="absolute inset-0">
         <iframe
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1&loop=1&playlist=dQw4w9WgXcQ&controls=0&showinfo=0&modestbranding=1&rel=0"
+          src="https://www.youtube.com/embed/YjDo48OhpuU?autoplay=1&mute=1&loop=1&playlist=YjDo48OhpuU&controls=0&showinfo=0&modestbranding=1&rel=0"
           className="absolute top-1/2 left-1/2 w-[200vw] h-[200vh] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           allow="autoplay; encrypted-media"
           title="Background video"

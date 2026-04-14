@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 
 const tiktokVideos = [
-  "7340000000000000001",
-  "7340000000000000002",
-  "7340000000000000003",
+  "7623129263729937695",
+  "7620012989076245793",
+  "7616031149248269582",
 ];
 
 export default function TikTokSection() {
