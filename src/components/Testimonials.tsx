@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
 import { Quote } from "lucide-react";
+// @ts-ignore
 import "swiper/css";
+// @ts-ignore
 import "swiper/css/pagination";
 
 import testimonialsBg from "@/assets/testimonials-bg.jpg";
