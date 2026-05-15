@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Lightbox from "./Lightbox";
+import { useApp } from "@/contexts/AppContext";
 
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
@@ -20,23 +21,16 @@ const images = [
 
 export default function Gallery() {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const { t } = useApp();
 
   return (
     <>
       <section id="gallery" className="section-padding bg-cream">
         <div className="container-max">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="section-title text-secondary">Our Portfolio</h2>
+          <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
+            <h2 className="section-title text-secondary">{t("gallery.title")}</h2>
             <div className="gold-divider" />
-            <p className="section-subtitle">
-              A glimpse into the unforgettable events we've had the honor of decorating. 
-              Each project is a testament to our commitment to excellence and beauty.
-            </p>
+            <p className="section-subtitle">{t("gallery.subtitle")}</p>
           </motion.div>
 
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
@@ -50,15 +44,10 @@ export default function Gallery() {
                 className="break-inside-avoid cursor-pointer group relative overflow-hidden rounded-lg"
                 onClick={() => setLightboxIndex(i)}
               >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  loading="lazy"
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <img src={img.src} alt={img.alt} loading="lazy" className="w-full object-cover transition-transform duration-700 group-hover:scale-110" />
                 <div className="absolute inset-0 bg-dark/0 group-hover:bg-dark/40 transition-all duration-500 flex items-center justify-center">
                   <span className="text-cream opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-body text-sm tracking-wider uppercase">
-                    View
+                    {t("gallery.view")}
                   </span>
                 </div>
               </motion.div>
@@ -68,12 +57,7 @@ export default function Gallery() {
       </section>
 
       {lightboxIndex !== null && (
-        <Lightbox
-          images={images}
-          currentIndex={lightboxIndex}
-          onClose={() => setLightboxIndex(null)}
-          onNavigate={setLightboxIndex}
-        />
+        <Lightbox images={images} currentIndex={lightboxIndex} onClose={() => setLightboxIndex(null)} onNavigate={setLightboxIndex} />
       )}
     </>
   );
