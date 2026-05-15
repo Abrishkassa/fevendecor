@@ -97,8 +97,30 @@
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
-html {
-  scroll-behavior: smooth;
+.dark {
+  --background: oklch(0.15 0.01 260);
+  --foreground: oklch(0.96 0.01 85);
+  --card: oklch(0.20 0.01 260);
+  --card-foreground: oklch(0.96 0.01 85);
+  --popover: oklch(0.20 0.01 260);
+  --popover-foreground: oklch(0.96 0.01 85);
+  --primary: oklch(0.78 0.13 85);
+  --primary-foreground: oklch(0.15 0.01 260);
+  --secondary: oklch(0.96 0.005 85);
+  --secondary-foreground: oklch(0.15 0.005 260);
+  --muted: oklch(0.25 0.01 260);
+  --muted-foreground: oklch(0.72 0.02 85);
+  --accent: oklch(0.78 0.13 85);
+  --accent-foreground: oklch(0.15 0.01 260);
+  --border: oklch(0.30 0.01 260);
+  --input: oklch(0.25 0.01 260);
+  --ring: oklch(0.78 0.13 85);
+  --gold: oklch(0.78 0.13 85);
+  --gold-light: oklch(0.88 0.10 85);
+  --gold-dark: oklch(0.65 0.13 85);
+  --cream: oklch(0.18 0.01 260);
+  --dark: oklch(0.10 0.005 260);
+  --dark-light: oklch(0.18 0.005 260);
 }
 
 @layer base {
