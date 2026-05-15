@@ -123,6 +123,10 @@
   --dark-light: oklch(0.18 0.005 260);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 @layer base {
   * {
     border-color: var(--color-border);
