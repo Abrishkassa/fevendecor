@@ -17,7 +17,7 @@ export default function TikTokSection() {
           <div className="gold-divider" />
           <p className="section-subtitle">
             {t("tiktok.subtitleA")}
-            <a href="https://tiktok.com/@fevendecor" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-dark transition-colors"> @fevendecor </a>
+            <a href="https://tiktok.com/@fevendekor1" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-dark transition-colors"> @fevendekor1 </a>
             {t("tiktok.subtitleB")}
           </p>
         </motion.div>
