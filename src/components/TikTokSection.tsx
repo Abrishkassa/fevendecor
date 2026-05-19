@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useApp } from "@/contexts/AppContext";
 
 const tiktokVideos = [
-  "7623129263729937695",
-  "7620012989076245793",
-  "7616031149248269582",
+  "7615569027783593234",
+  "7601585252942793991",
+  "7584500258424556808",
 ];
 
 export default function TikTokSection() {
@@ -17,7 +17,7 @@ export default function TikTokSection() {
           <div className="gold-divider" />
           <p className="section-subtitle">
             {t("tiktok.subtitleA")}
-            <a href="https://tiktok.com/@fevendecor" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-dark transition-colors"> @fevendecor </a>
+            <a href="https://tiktok.com/@fevendekor1" target="_blank" rel="noopener noreferrer" className="text-gold hover:text-gold-dark transition-colors"> @fevendekor1 </a>
             {t("tiktok.subtitleB")}
           </p>
         </motion.div>
