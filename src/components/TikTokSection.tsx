@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import { useApp } from "@/contexts/AppContext";
 
 const tiktokVideos = [
-  "7623129263729937695",
-  "7620012989076245793",
-  "7616031149248269582",
+  "7615569027783593234",
+  "7601585252942793991",
+  "7584500258424556808",
 ];
 
 export default function TikTokSection() {
