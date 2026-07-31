@@ -11,6 +11,8 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import BackToTop from "@/components/BackToTop";
+import BookingModal from "@/components/BookingModal";
+import { Toaster } from "@/components/ui/sonner";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -40,6 +42,8 @@ function Index() {
       <Footer />
       <WhatsAppButton />
       <BackToTop />
+      <BookingModal />
+      <Toaster position="top-center" richColors />
     </div>
   );
 }

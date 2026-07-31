@@ -1,9 +1,11 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useApp } from "@/contexts/AppContext";
+import { useBooking } from "@/contexts/BookingContext";
 
 export default function Hero() {
   const { t } = useApp();
+  const { openBooking } = useBooking();
   const scrollTo = (href: string) => {
     const el = document.querySelector(href);
     if (el) {
@@ -47,7 +49,7 @@ export default function Hero() {
           <button onClick={() => scrollTo("#gallery")} className="btn-gold rounded-sm">
             {t("hero.cta1")}
           </button>
-          <button onClick={() => scrollTo("#contact")} className="btn-outline-gold rounded-sm text-cream border-cream/40 hover:bg-cream hover:text-secondary">
+          <button onClick={() => openBooking()} className="btn-outline-gold rounded-sm text-cream border-cream/40 hover:bg-cream hover:text-secondary">
             {t("hero.cta2")}
           </button>
         </motion.div>

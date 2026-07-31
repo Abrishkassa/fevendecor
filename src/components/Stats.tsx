@@ -32,7 +32,7 @@ export default function Stats() {
             >
               <stat.icon size={36} className="mx-auto mb-4 text-gold" />
               <div className="font-heading text-4xl sm:text-5xl font-bold text-cream mb-2">
-                {inView ? <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} /> : "0"}
+                {inView ? <CountUp end={stat.value} duration={2.5} suffix={stat.suffix} /> : `${stat.value}${stat.suffix}`}
               </div>
               <p className="font-body text-sm tracking-wider uppercase text-cream/60">
                 {t(stat.key)}

@@ -127,6 +127,36 @@ const dict: Dict = {
   "contact.send": { en: "Send Message", am: "መልዕክት ላክ" },
   "contact.thanks": { en: "✓ Thank you! We'll get back to you within 24 hours.", am: "✓ እናመሰግናለን! በ24 ሰዓት ውስጥ እንመልስልዎታለን።" },
 
+  // Booking
+  "nav.bookNow": { en: "Book Now", am: "አሁን ይያዙ" },
+  "booking.title": { en: "Book Your Decoration", am: "ማስዋብዎን ይያዙ" },
+  "booking.subtitle": {
+    en: "Fill in your event details and we'll confirm availability on WhatsApp within hours.",
+    am: "የዝግጅትዎን ዝርዝሮች ይሙሉ፣ በሰዓታት ውስጥ በዋትስአፕ እንመልስልዎታለን።",
+  },
+  "booking.service": { en: "Select a Service", am: "አገልግሎት ይምረጡ" },
+  "booking.servicePh": { en: "Choose a service", am: "አገልግሎት ይምረጡ" },
+  "booking.date": { en: "Preferred Event Date", am: "የሚፈለግ የዝግጅት ቀን" },
+  "booking.datePh": { en: "Pick a date", am: "ቀን ይምረጡ" },
+  "booking.guestCount": { en: "Estimated Guest Count", am: "የእንግዶች ብዛት (ግምት)" },
+  "booking.guestCountPh": { en: "e.g. 150", am: "ለምሳሌ 150" },
+  "booking.name": { en: "Full Name", am: "ሙሉ ስም" },
+  "booking.namePh": { en: "Enter your full name", am: "ሙሉ ስምዎን ያስገቡ" },
+  "booking.phone": { en: "Phone Number", am: "ስልክ ቁጥር" },
+  "booking.phonePh": { en: "e.g. 0911234567", am: "ለምሳሌ 0911234567" },
+  "booking.email": { en: "Email (optional)", am: "ኢሜይል (አማራጭ)" },
+  "booking.emailPh": { en: "Enter your email", am: "ኢሜይልዎን ያስገቡ" },
+  "booking.notes": { en: "Venue, Theme Colors, Budget Range & Other Details", am: "ቦታ፣ የቀለም ጭብጥ፣ የበጀት መጠንና ሌሎች ዝርዝሮች" },
+  "booking.notesPh": { en: "Tell us anything that will help us prepare your quote...", am: "ግምት እንድናዘጋጅ የሚረዳንን ማንኛውንም ነገር ይንገሩን..." },
+  "booking.submit": { en: "Send Booking Request via WhatsApp", am: "የቦታ ማስያዣ ጥያቄ በዋትስአፕ ላክ" },
+  "booking.close": { en: "Cancel", am: "ይቅር" },
+  "booking.errorRequired": { en: "This field is required", am: "ይህ መስክ ያስፈልጋል" },
+  "booking.errorDate": { en: "Please select a date", am: "እባክዎ ቀን ይምረጡ" },
+  "booking.errorPhone": { en: "Enter a valid phone number", am: "ትክክለኛ ስልክ ቁጥር ያስገቡ" },
+  "booking.toastTitle": { en: "Booking request ready", am: "የማስያዣ ጥያቄ ተዘጋጅቷል" },
+  "booking.toastDesc": { en: "Opening WhatsApp to send your request to Feven Decor.", am: "ጥያቄዎን ወደ ፌቨን ዴኮር ለመላክ ዋትስአፕ በመክፈት ላይ።" },
+  "booking.bookThis": { en: "Book This Service", am: "ይህን አገልግሎት ይያዙ" },
+
   // Footer
   "footer.brand": {
     en: "Premium wedding & event decoration services based in Hawassa, Ethiopia. Transforming celebrations into unforgettable experiences since 2016.",

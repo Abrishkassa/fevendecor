@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Sun, Moon, Languages } from "lucide-react";
 import SocialIcons from "./SocialIcons";
 import { useApp } from "@/contexts/AppContext";
+import { useBooking } from "@/contexts/BookingContext";
 
 const navKeys = [
   { key: "nav.home", href: "#home" },
@@ -18,6 +19,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t, lang, setLang, theme, toggleTheme } = useApp();
+  const { openBooking } = useBooking();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
@@ -87,6 +89,12 @@ export default function Navbar() {
           <div className="ml-2 flex items-center gap-3">
             <Toggles />
             <SocialIcons size={18} />
+            <button
+              onClick={() => openBooking()}
+              className="btn-gold rounded-full !py-2 !px-5 text-xs"
+            >
+              {t("nav.bookNow")}
+            </button>
           </div>
         </div>
 
@@ -123,6 +131,15 @@ export default function Navbar() {
                   {t(link.key)}
                 </motion.button>
               ))}
+              <button
+                onClick={() => {
+                  setMobileOpen(false);
+                  openBooking();
+                }}
+                className="btn-gold rounded-full !py-2 !px-6 text-xs mt-1"
+              >
+                {t("nav.bookNow")}
+              </button>
               <div className="flex items-center gap-4 mt-2">
                 <SocialIcons size={20} />
               </div>

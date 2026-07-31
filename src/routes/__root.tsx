@@ -1,5 +1,6 @@
 import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
 import { AppProvider } from "@/contexts/AppContext";
+import { BookingProvider } from "@/contexts/BookingContext";
 
 import appCss from "../styles.css?url";
 
@@ -32,18 +33,16 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Feven Decor Showcase is a luxury event decoration website featuring animated sections and a responsive design." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Feven Decor Showcase is a luxury event decoration website featuring animated sections and a responsive design." },
+      { title: "Feven Decor | Premium Wedding & Event Decoration in Hawassa" },
+      { name: "description", content: "Feven Decor transforms your celebrations into breathtaking visual masterpieces. Premium wedding and event decoration services in Hawassa, Ethiopia." },
+      { name: "author", content: "Feven Decor" },
+      { property: "og:title", content: "Feven Decor | Premium Wedding & Event Decoration" },
+      { property: "og:description", content: "Luxury wedding and event decoration services in Hawassa, Ethiopia. Where dreams come alive." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Feven Decor Showcase is a luxury event decoration website featuring animated sections and a responsive design." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4edf907c-4989-47d5-bb36-63a759d02ffa/id-preview-846c6458--7ec83607-3cc9-4b9e-8c50-cd857ee1310c.lovable.app-1776240158505.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/4edf907c-4989-47d5-bb36-63a759d02ffa/id-preview-846c6458--7ec83607-3cc9-4b9e-8c50-cd857ee1310c.lovable.app-1776240158505.png" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:site", content: "@fevendecor" },
+      { name: "twitter:title", content: "Feven Decor | Premium Wedding & Event Decoration" },
+      { name: "twitter:description", content: "Luxury wedding and event decoration services in Hawassa, Ethiopia. Where dreams come alive." },
     ],
     links: [
       {
@@ -74,7 +73,9 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   return (
     <AppProvider>
-      <Outlet />
+      <BookingProvider>
+        <Outlet />
+      </BookingProvider>
     </AppProvider>
   );
 }

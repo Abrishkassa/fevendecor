@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { Heart, Flower2, Sparkles, PartyPopper, Church, Palette } from "lucide-react";
+import { Heart, Flower2, Sparkles, PartyPopper, Church, Palette, ArrowRight } from "lucide-react";
 import { useApp } from "@/contexts/AppContext";
+import { useBooking } from "@/contexts/BookingContext";
 
 const services = [
   { icon: Heart, key: "s1" },
@@ -13,6 +14,7 @@ const services = [
 
 export default function Services() {
   const { t } = useApp();
+  const { openBooking } = useBooking();
   return (
     <section id="services" className="section-padding bg-cream">
       <div className="container-max">
@@ -38,9 +40,16 @@ export default function Services() {
               <h3 className="font-heading text-xl font-semibold text-secondary mb-3">
                 {t(`services.${service.key}.title`)}
               </h3>
-              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+              <p className="font-body text-sm text-muted-foreground leading-relaxed mb-4">
                 {t(`services.${service.key}.desc`)}
               </p>
+              <button
+                onClick={() => openBooking(service.key)}
+                className="inline-flex items-center gap-1.5 font-body text-xs tracking-wider uppercase text-gold hover:gap-2.5 transition-all duration-300"
+              >
+                {t("booking.bookThis")}
+                <ArrowRight size={14} />
+              </button>
             </motion.div>
           ))}
         </div>

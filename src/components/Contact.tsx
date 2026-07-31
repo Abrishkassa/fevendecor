@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { toast } from "sonner";
 import SocialIcons from "./SocialIcons";
 import { useApp } from "@/contexts/AppContext";
+import { buildWhatsAppLink } from "@/lib/whatsapp";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -11,7 +13,15 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", form);
+    const message = [
+      "Hello Feven Decor! I have an inquiry.",
+      "",
+      `Name: ${form.name}`,
+      `Email: ${form.email}`,
+      `Message: ${form.message}`,
+    ].join("\n");
+    window.open(buildWhatsAppLink(message), "_blank", "noopener,noreferrer");
+    toast.success(t("contact.thanks"));
     setSubmitted(true);
     setForm({ name: "", email: "", message: "" });
     setTimeout(() => setSubmitted(false), 5000);
