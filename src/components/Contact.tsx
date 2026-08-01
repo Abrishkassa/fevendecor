@@ -45,8 +45,8 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-heading font-semibold text-secondary mb-1">{t("contact.callUs")}</h4>
-                  <a href="tel:+251911234567" className="font-body text-sm text-muted-foreground hover:text-gold transition-colors block">+251 911 234 567</a>
-                  <a href="tel:+251912345678" className="font-body text-sm text-muted-foreground hover:text-gold transition-colors block">+251 912 345 678</a>
+                  <a href="tel:+251911765172" className="font-body text-sm text-muted-foreground hover:text-gold transition-colors block">+251 911 765 172</a>
+                  <a href="tel:+251916056366" className="font-body text-sm text-muted-foreground hover:text-gold transition-colors block">+251 916 056 366</a>
                 </div>
               </div>
 
@@ -72,7 +72,7 @@ export default function Contact() {
             </div>
 
             <a
-              href="https://wa.me/251911234567?text=Hello%20Feven%20Decor!%20I'm%20interested%20in%20your%20decoration%20services."
+              href="https://wa.me/251911765172?text=Hello%20Feven%20Decor!%20I'm%20interested%20in%20your%20decoration%20services."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-3 btn-gold rounded-full"

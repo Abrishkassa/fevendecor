@@ -45,10 +45,10 @@ export default function Footer() {
           <div>
             <h4 className="font-heading text-lg font-semibold text-cream mb-4">{t("footer.contactInfo")}</h4>
             <ul className="space-y-2 font-body text-sm text-cream/60">
-              <li>📞 +251 911 234 567</li>
-              <li>📞 +251 912 345 678</li>
+              <li>📞 +251 911 765 172</li>
+              <li>📞 +251 916 056 366</li>
               <li>✉️ info@fevendecor.com</li>
-              <li>📍 Hawassa, SNNPR, Ethiopia</li>
+              <li>📍 Hawassa, Sidama, Ethiopia</li>
             </ul>
           </div>
 
